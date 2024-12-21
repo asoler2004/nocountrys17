@@ -185,7 +185,7 @@ with tab1:
    
 
   image_url='https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/F1_%28registered_trademark%29.svg/250px-F1_%28registered_trademark%29.svg.png'
-  response = requests.get(image_url)
+  response = requests.get(image_url, timeout=60)
 
   # Check if the request was successful
   if response.status_code == 200:
@@ -206,7 +206,7 @@ with tab2:
 with tab4:
 
   path='https://github.com/asoler2004/nocountrys17/raw/main/model.pkl'
-  response = requests.get(path)
+  response = requests.get(path, timeout=60)
 
   # Check if the request was successful
   if response.status_code == 200:
